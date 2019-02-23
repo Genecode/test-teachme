@@ -1,0 +1,19 @@
+en:
+  doc:
+    v1:
+      video_views:
+        errors:
+          e422: 'Validation error'
+        create: 'Create video wiews'
+        customer: 'Customer ID'
+        video: 'Video ID'
+      customer:
+        show: 'Return how much video threads does the customer watch'
+        id: 'Customer ID'
+        errors:
+          e404: 'Customer not found'
+      video:
+        show: 'Return how many customers are watching this video'
+        id: 'Video ID'
+        errors:
+          e404: 'Video not found'
