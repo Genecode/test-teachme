@@ -11,7 +11,8 @@ class Api::V1::VideoController < Api::V1::BaseController
     }
   EXAMPLE
   def show
-    @customer_count = VideoView.where(video_id: params[:id].to_i).count
+    @search_template = "*:video_id:#{params[:id]}"
+    @customer_count = $redis.keys(@search_template).count
     render json: { code: 200, customer_count: @customer_count }, status: 200
   end
 end

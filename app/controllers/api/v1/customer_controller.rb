@@ -1,5 +1,4 @@
 class Api::V1::CustomerController < Api::V1::BaseController
-
   resource_description do
     formats ['json']
   end
@@ -12,7 +11,8 @@ class Api::V1::CustomerController < Api::V1::BaseController
     }
   EXAMPLE
   def show
-    @video_count = VideoView.where(customer_id: params[:id].to_i).count
+    @search_template = "customer_id:#{params[:id]}:*"
+    @video_count = $redis.keys(@search_template).count
     render json: { code: 200, video_count: @video_count }, status: 200
   end
 end
