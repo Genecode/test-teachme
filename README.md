@@ -1,24 +1,39 @@
-# README
+# Video Views (Test Application)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Описание
 
-Things you may want to cover:
+Проект создан в рамках выполнения тестового задания.  Требуется на Ruby сервис, реализующий REST API со следующими функциями:  Принимает от клиентов уведомления о том, что клиент смотрит видео. Отвечает на запрос, сколько видео потоков смотрит пользователь в данный момент. Отвечает на вопрос, сколько пользователей смотрят данное видео. 
 
-* Ruby version
+##### Ruby version
+```
+ruby 2.5
+```
 
-* System dependencies
+##### Ruby on Rails version
+```
+Rails 5.2
+```
 
-* Configuration
+### Первый запуск
+```
+gem install bundler
+bundle install
+```
 
-* Database creation
+Далее необходимо сконфигурировать файлы `config/database.yml` под ваш PG
 
-* Database initialization
+Подготавливаем базу данных:
 
-* How to run the test suite
+```
+rails db:create
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Запуск сервера
 
-* Deployment instructions
+```
+rails s
+```
+### Документация API
 
-* ...
+Описание существующих экшенов и праметров запросов будет доступно по адресу  http://localhost:3000/apipie после запуска сервера. 
