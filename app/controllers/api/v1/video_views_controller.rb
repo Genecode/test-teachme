@@ -13,6 +13,6 @@ class Api::V1::VideoViewsController < Api::V1::BaseController
   private
 
   def video_view_params
-    params.permit(:customer_id, :video_id)
+    params.require(:video_view).permit(:customer_id, :video_id)
   end
 end

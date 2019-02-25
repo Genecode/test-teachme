@@ -12,7 +12,7 @@ class Api::V1::CustomerController < Api::V1::BaseController
     }
   EXAMPLE
   def show
-    @video_count = VideoView.where(customer_id: params[:id].to_i).count
+    @video_count = VideoView.watch_now.where(customer_id: params[:id].to_i).count
     render json: { code: 200, video_count: @video_count }, status: 200
   end
 end

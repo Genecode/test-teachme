@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_02_23_195803) do
     t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_video_views_on_created_at"
     t.index ["customer_id"], name: "index_video_views_on_customer_id"
     t.index ["video_id"], name: "index_video_views_on_video_id"
   end

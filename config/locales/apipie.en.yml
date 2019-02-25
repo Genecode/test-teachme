@@ -4,7 +4,7 @@ en:
       video_views:
         errors:
           e422: 'Validation error'
-        create: 'Create video wiews'
+        create: 'Create video views'
         customer: 'Customer ID'
         video: 'Video ID'
       customer:
