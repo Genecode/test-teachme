@@ -6,7 +6,7 @@
 
 ##### Ruby version
 ```
-ruby 2.5
+ruby 2.6
 ```
 
 ##### Ruby on Rails version
@@ -26,7 +26,7 @@ bundle install
 ```
 
 Далее необходимо сконфигурировать файлы `config/database.yml` под ваш PG
-Также, настроить подключение к Redis в `config/initialazers/redis.rb`, если сервер Redis настроен не по  дефолту (127.0.0.1:6379)
+И подключение к redis `config/redis.yml` 
 
 Подготавливаем базу данных:
 
